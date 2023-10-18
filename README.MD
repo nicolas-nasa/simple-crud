@@ -45,7 +45,7 @@ Api documentation is created using swagger, there is possible to find all endpoi
 
 ## Security
 
-Something used to prevent injection-type attacks is an ORM Sequelize and Hemet
+Something used to prevent injection-type attacks is an Sequelize, Hemet and Cors
 
 ## Authentication
 
