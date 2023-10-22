@@ -44,10 +44,26 @@ const deletePerson = async (id: number): Promise<PersonEntity> => {
     const response = await prisma.person.delete({ where: { id } });
     return response;
 };
-const listPerson = async (): Promise<PersonEntity[]> => {
+const listPerson = async (email?: string): Promise<PersonEntity[]> => {
+    if (email) {
+        return [
+            await prisma.person.findFirstOrThrow({
+                where: {
+                    email,
+                },
+            }),
+        ];
+    }
     const response = await prisma.person.findMany();
     return response;
 };
 
-export { createPerson, deletePerson, listPerson, updatePerson };
+const getPerson = async (id: string): Promise<PersonEntity[]> => {
+    const response = await prisma.person.findFirstOrThrow({
+        where: { id: parseFloat(id) },
+    });
+    return [response];
+};
+
+export { createPerson, deletePerson, getPerson, listPerson, updatePerson };
 

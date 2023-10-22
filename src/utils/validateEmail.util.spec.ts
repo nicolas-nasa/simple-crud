@@ -1,4 +1,4 @@
-import { validateEmail } from '@/utils';
+import { validateEmail } from '../utils';
 describe('Validate Email Class', () => {
     it('Check is a valid Email format', async () => {
         const email = 'nicolas.almeida@email.com';

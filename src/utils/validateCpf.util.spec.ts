@@ -1,4 +1,4 @@
-import { validateCPF } from '@/utils';
+import { validateCPF } from '../utils';
 describe('Validate CPF Class', () => {
     it('Check is a valid cpf', async () => {
         const cpf = '456.771.658.24';

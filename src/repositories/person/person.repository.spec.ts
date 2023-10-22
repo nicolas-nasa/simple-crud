@@ -2,7 +2,7 @@ import { PersonRepository } from '.';
 import { PersonEntity } from '../../entities';
 describe('Test Person Repository', () => {
     it('list Persons', async () => {
-        const response = await PersonRepository.listPerson();
+        const response = await PersonRepository.listPerson('sana@gmail.com');
         console.log(response);
         expect(response).toBeInstanceOf(Array<PersonEntity>);
     });

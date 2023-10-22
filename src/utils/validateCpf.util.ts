@@ -21,11 +21,13 @@ export class ValidateCPF {
 
     async separeVerifyingDigitAndNumbers(
         cpf: string,
-    ): Promise<{ allNumbers: string; numbersWithOutDv: string; verifyingDigit: string }> {
-        const [allNumbers, numbersWithOutDv, verifyingDigit] = cpf.match(
-            /^(\d{9})(\d{2})$/,
-        );
-        return { allNumbers, numbersWithOutDv, verifyingDigit };
+    ): Promise<{ numbersWithOutDv: string; verifyingDigit: string }> {
+        const [, numbersWithOutDv, verifyingDigit] = cpf.match(/^(\d{9})(\d{2})$/) || [
+            ,
+            '',
+            '',
+        ];
+        return { numbersWithOutDv, verifyingDigit };
     }
 
     async calculateVerifyingDigit(numbersWithOutDv: string): Promise<number> {
@@ -60,11 +62,8 @@ export class ValidateCPF {
         const isRepeated = await this.checkIsRepeated(cpf);
         const isCPFSize = await this.checkSize(cpf);
         if (isRepeated || !isCPFSize) return false;
-        const {
-            allNumbers,
-            numbersWithOutDv,
-            verifyingDigit,
-        } = await this.separeVerifyingDigitAndNumbers(cpf);
+        const { numbersWithOutDv, verifyingDigit } =
+            await this.separeVerifyingDigitAndNumbers(cpf);
         const validateCpf = this.validateVerifyingDigit(numbersWithOutDv, verifyingDigit);
 
         return validateCpf;
