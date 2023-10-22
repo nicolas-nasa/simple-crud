@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project is a simple CRUD RESTful API, using Node.js with typescript.
+This project is a simple and fast created CRUD RESTful API, using Node.js with typescript.
 
 ## Project Requirements
 
@@ -29,7 +29,7 @@ yarn start
 
 -   To check if your application is running and test endpoints access documentation endpoint in your browser [Documentation](http://localhost:2702/api/swagger).
 
-## Test Application
+## Test Application ( Need finish CI to Cover More percentage of the project )
 
 All tests is created with a jest, to find in project just go to controller or repository folder, extension of the files is "\*.spec.ts".
 
@@ -39,7 +39,7 @@ All tests is created with a jest, to find in project just go to controller or re
 yarn test
 ```
 
-## Documentation
+## Documentation (Not Created Yet)
 
 Api documentation is created using swagger, there is possible to find all endpoints and use cases just go to [Documentation](http://localhost:2702/api/swagger).
 
@@ -47,6 +47,10 @@ Api documentation is created using swagger, there is possible to find all endpoi
 
 Something used to prevent injection-type attacks is an Sequelize, Hemet and Cors
 
-## Authentication
+## Authentication (Not Created Yet)
 
-To more security is used a JWT auth, to generate a token wen you have credentials
+To more security is used a JWT auth, to generate a token when you have credentials
+
+## Other
+
+thanks for check the repository!
