@@ -13,7 +13,7 @@ This project is a simple and fast created CRUD RESTful API, using Node.js with t
 
 ## Get Start
 
-To Run this project you need install a [Node.js](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/en/docs/install).
+To Run this project you need install a [Node.js](https://nodejs.org/) , [Yarn](https://yarnpkg.com/) and [Docker](https://www.docker.com/products/docker-desktop/)
 
 -   Run a yarn command in your terminal to get dependencies using:
 
