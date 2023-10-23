@@ -21,6 +21,12 @@ To Run this project you need install a [Node.js](https://nodejs.org/en/download/
 yarn install
 ```
 
+-   To start a database, have one docker compose just use this command and check file docker-compose.yml to get credentials:
+
+```
+docker compose up
+```
+
 -   Configure de env variables have one file exemple.
 -   to start the project use command:
 
