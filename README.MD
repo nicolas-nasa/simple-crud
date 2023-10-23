@@ -21,13 +21,14 @@ To Run this project you need install a [Node.js](https://nodejs.org/en/download/
 yarn install
 ```
 
+-   Configure de env variables have one file exemple.
 -   to start the project use command:
 
 ```
 yarn start
 ```
 
--   To check if your application is running and test endpoints access documentation endpoint in your browser [Documentation](http://localhost:2702/api/swagger).
+-   To check if your application is running and test endpoints access documentation endpoint in your browser [Documentation](http://localhost:4008/api/swagger).
 
 ## Test Application ( Need finish CI to Cover More percentage of the project )
 
@@ -41,11 +42,11 @@ yarn test
 
 ## Documentation (Not Created Yet)
 
-Api documentation is created using swagger, there is possible to find all endpoints and use cases just go to [Documentation](http://localhost:2702/api/swagger).
+Api documentation is created using swagger, there is possible to find all endpoints and use cases just go to [Documentation](http://localhost:4008/api/swagger).
 
 ## Security
 
-Something used to prevent injection-type attacks is an Sequelize, Hemet and Cors
+Something used to prevent injection-type attacks is an Prisma, Hemet and Cors
 
 ## Authentication (Not Created Yet)
 
